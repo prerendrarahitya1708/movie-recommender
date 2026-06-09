@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎬 Movie Recommender</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f1a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #1a1a2e;
+      border-radius: 16px;
+      padding: 40px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; }
+    p  { color: #aaa; margin-bottom: 28px; font-size: 0.95rem; }
+    label { display: block; margin-bottom: 6px; font-size: 0.85rem; color: #ccc; }
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #0f0f1a;
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #e50914, #b00710);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    button:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎬 Movie Recommender</h1>
+    <p>Pick a movie and a user profile to get personalized recommendations.</p>
+    <form action="/recommend" method="POST">
+      <label for="title">Choose a Movie</label>
+      <select name="title" id="title">
+        {% for movie in movies %}
+          <option value="{{ movie }}">{{ movie }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="user">Choose a User Profile</label>
+      <select name="user" id="user">
+        {% for user in users %}
+          <option value="{{ user }}">{{ user }}</option>
+        {% endfor %}
+      </select>
+
+      <button type="submit">Get Recommendations →</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Results — Movie Recommender</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f1a;
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container { max-width: 600px; margin: 0 auto; }
+    h1 { font-size: 1.6rem; margin-bottom: 6px; }
+    .subtitle { color: #aaa; margin-bottom: 28px; font-size: 0.9rem; }
+    .card {
+      background: #1a1a2e;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #2a2a40;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: #e50914; }
+    .rank {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #e50914;
+      margin-right: 16px;
+      min-width: 28px;
+    }
+    .info { flex: 1; }
+    .info h2 { font-size: 1rem; margin-bottom: 4px; }
+    .info span { font-size: 0.8rem; color: #888; }
+    .score {
+      text-align: right;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .score strong { display: block; font-size: 1.1rem; color: #fff; }
+    .back {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 24px;
+      background: #1a1a2e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+    .back:hover { border-color: #e50914; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Recommendations for {{ user }}</h1>
+    <p class="subtitle">Based on your interest in <strong>{{ title }}</strong></p>
+
+    {% for movie in results %}
+    <div class="card">
+      <div class="rank">#{{ loop.index }}</div>
+      <div class="info">
+        <h2>{{ movie.title }}</h2>
+        <span>{{ movie.genres }} &nbsp;|&nbsp; ⭐ {{ movie.rating }}</span>
+      </div>
+      <div class="score">
+        <strong>{{ movie.score }}</strong>
+        match
+      </div>
+    </div>
+    {% endfor %}
+
+    <a href="/" class="back">← Try Another</a>
+  </div>
+</body>
+</html>

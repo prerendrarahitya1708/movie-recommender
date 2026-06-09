@@ -1,0 +1,16 @@
+movie_id,title,genres,tags,rating,votes
+1,The Dark Knight,Action|Crime|Thriller,batman superhero dark gritty,9.0,2500000
+2,Inception,Action|Sci-Fi|Thriller,dreams mindbending scifi twist,8.8,2200000
+3,Interstellar,Adventure|Drama|Sci-Fi,space time travel emotional,8.6,1900000
+4,The Matrix,Action|Sci-Fi,simulation reality hacker future,8.7,1800000
+5,Pulp Fiction,Crime|Drama,nonlinear dialogue crime quirky,8.9,2000000
+6,The Shawshank Redemption,Drama,prison hope friendship redemption,9.3,2600000
+7,Fight Club,Drama|Thriller,twist identity dark psychological,8.8,2100000
+8,Forrest Gump,Drama|Romance,life journey heartwarming history,8.8,1900000
+9,The Silence of the Lambs,Crime|Horror|Thriller,serial killer fbi psychological dark,8.6,1400000
+10,Goodfellas,Biography|Crime|Drama,mafia mob crime gritty,8.7,1600000
+11,The Godfather,Crime|Drama,mafia family power classic,9.2,1800000
+12,Avengers Endgame,Action|Adventure|Sci-Fi,superhero marvel epic battle,8.4,1000000
+13,Joker,Crime|Drama|Thriller,villain origin dark psychological,8.4,1100000
+14,Parasite,Comedy|Drama|Thriller,class satire twist dark,8.5,800000
+15,Get Out,Horror|Mystery|Thriller,race psychological twist horror,7.7,600000
